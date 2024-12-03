@@ -84,11 +84,11 @@ const drawFood = () => {
 
 //A const desenhSnake recebe os elementos e cria um começo da Snake
 const drawSnake = () => {
-  ctx.fillStyle = "#66CDAA"
+  ctx.fillStyle = "white"
 
   snake.forEach((position, index) => {
     if (index == snake.length - 1) {
-      ctx.fillStyle = "#FFA500"
+      ctx.fillStyle = "#F7A500"
     }
 
     ctx.fillRect(position.x, position.y, size, size)
@@ -195,8 +195,10 @@ const gameOver = () => {
   direction = undefined
 
   menu.style.display = "flex"
-  finalScore.innerText = score.innerText
+  finalScore.innerText = score.innerText 
   canvas.style.filter = "blur(2px)"
+  
+  
 }
 
 
@@ -215,7 +217,7 @@ const gameLoop = () => {
 
   loopId = setTimeout(() => {
     gameLoop()
-  }, 300)
+  }, 100)
 }
 
 
